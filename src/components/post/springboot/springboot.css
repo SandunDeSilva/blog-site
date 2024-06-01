@@ -1,0 +1,30 @@
+.springboot-container {
+  text-align: left;
+  background-color: #f0f0f0;
+  padding: 20px;
+  padding-left: 5rem;
+}
+
+.topic {
+  text-align: center;
+}
+
+.indent {
+  margin-left: 1cm;
+}
+
+@media screen and (max-width: 768px) {
+  .indent {
+    margin-left: 0;
+    padding-left: 1rem;
+  }
+}
+
+.question {
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
