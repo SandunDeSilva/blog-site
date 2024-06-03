@@ -427,6 +427,70 @@ function Springboot() {
           enable you to add, retrieve, modify, and remove data, respectively.
         </p>
       </div>
+      <div>
+        <p className="question">What is Spring Boot Caching?</p>{" "}
+        <p className="indent">
+          Spring Boot Caching helps you store and retrieve data quickly by using
+          an in-memory cache. It reduces the time spent on repeated data
+          fetching or computations, thus improving the performance of your
+          application. By enabling caching, creating caches, and using
+          annotations like @Cacheable, you can easily integrate caching into
+          your Spring Boot application.
+        </p>
+      </div>
+      <div>
+        <p className="question">
+          What are RESTful Web Services in Spring Boot ?
+        </p>{" "}
+        <p className="indent">
+          RESTful web services are a way for different applications to
+          communicate over the internet using standard web protocols. Spring
+          Boot makes it easier to create these services. Here's a breakdown:
+        </p>
+        <p className="indent">
+          <ul>
+            <li>
+              Resources: Things like data or objects (e.g., users, orders) that
+              you want to manage.
+            </li>
+          </ul>
+          <ul>
+            <li>
+              HTTP Methods: Actions you can perform on resources:
+              <ul>
+                <li>GET: Retrieve data.</li>
+                <li>POST: Create new data.</li>
+                <li>PUT: Update existing data.</li>
+                <li>DELETE: Remove data.</li>
+              </ul>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              Stateless: Each request from a client to the server must contain
+              all the information needed, and the server doesn't store any
+              client data between requests.
+            </li>
+          </ul>
+          <ul>
+            <li>
+              Representation: Resources are typically represented in formats
+              like JSON or XML when sent over the web.
+            </li>
+          </ul>
+          <ul>
+            <li>
+              Spring Boot: A framework that simplifies creating web applications
+              in Java. It provides:
+              <ul>
+                <li>Controllers: Handle HTTP requests.</li>
+                <li>Repositories: Manage data access.</li>
+                <li>Services: Contain business logic.</li>
+              </ul>
+            </li>
+          </ul>
+        </p>{" "}
+      </div>
     </div>
   );
 }
