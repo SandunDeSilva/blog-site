@@ -20,6 +20,13 @@ export default function Posts() {
         description="Django is a high-level web framework for building web applications using Python. It promotes rapid development and clean, pragmatic design, offering developers a robust toolkit to create web applications efficiently."
       />
 
+      <Post
+        img={`${process.env.PUBLIC_URL}/assets/django_with_aws.jpg`}
+        title="Host Django Application on AWS"
+        url="/post/django_with_aws"
+        description="Discover how to easily host your Django application on AWS with clear and simple way"
+      />
+
       {/* <Post
         img="https://images.pexels.com/photos/6711867/pexels-photo-6711867.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
         title="Post 3"

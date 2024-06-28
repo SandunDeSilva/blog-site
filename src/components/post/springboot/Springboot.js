@@ -491,6 +491,177 @@ function Springboot() {
           </ul>
         </p>{" "}
       </div>
+      <div>
+        <p className="question">What is Spring Boot Auto Configuration ?</p>{" "}
+        <p className="indent">
+          It automatically sets things up based on dependencies you have added
+          to your project. This way, you don't have to manually configure each
+          part yourself.
+        </p>
+      </div>
+      <div>
+        <p className="question">What is Dispatcher Servlet ?</p>{" "}
+        <p className="indent">
+          The DispatcherServlet is a core component in Spring's web framework
+          (Spring MVC). It acts as the front controller in the MVC
+          (Model-View-Controller) pattern, handling all incoming HTTP requests
+          and dispatching them to the appropriate handlers (controllers). <br />{" "}
+          How it works ?
+        </p>
+        <p className="indent">
+          <ul>
+            <li>
+              Receives Requests: The DispatcherServlet receives all HTTP
+              requests to your application.
+            </li>
+          </ul>
+          <ul>
+            <li>
+              Finds Handlers: It looks for the appropriate controller method to
+              handle the request based on the URL and HTTP method (GET, POST,
+              etc.).
+            </li>
+          </ul>
+          <ul>
+            <li>
+              Processes Requests: It calls the controller method, which
+              processes the request and returns a view name or response data.
+            </li>
+          </ul>
+          <ul>
+            <li>
+              Returns Response: Finally, the DispatcherServlet sends the
+              response back to the client.
+            </li>
+          </ul>
+        </p>{" "}
+      </div>
+      <div>
+        <p className="question">
+          What is Internationalization of RESTful Services?
+        </p>{" "}
+        <p className="indent">
+          Internationalization (i18n) of RESTful services is about making web
+          APIs (ways for apps to talk to each other) support different languages
+          and regions. This means your API can give responses in the user’s own
+          language and format, like dates and currency. <br /> <br />
+          Key Points:
+        </p>
+        <p className="indent">
+          <ul>
+            <li>
+              Detect User’s Language: The API looks at the user’s language
+              setting (like English or Spanish) to know what language to use.
+            </li>
+          </ul>
+          <ul>
+            <li>
+              Provide Translated Responses: The API sends back messages and data
+              in the user’s language and format.
+            </li>
+          </ul>
+          <ul>
+            <li>
+              Use Translation Files: Keep translations and settings in separate
+              files for each language.
+            </li>
+          </ul>
+          <p>
+            Benefits:
+            <ul>
+              <li>
+                More Users Can Use It: People from different countries can use
+                the API.
+              </li>
+              <li>
+                Better Experience: Users get information in a way that makes
+                sense to them.
+              </li>
+            </ul>
+          </p>
+        </p>{" "}
+      </div>
+      <div>
+        <p className="question">
+          Implementing Static Filtering for RESTful Services
+        </p>{" "}
+        <p className="indent">
+          This section is about how to filter the request. Consider a scenario
+          in which we do not want to show some class members in the response.
+          This process is called filtering. This has two annotations that are
+          used in filtering are: <b>@JsonIgnore</b> and{" "}
+          <b>@JsonIgnoreProperties.</b>
+        </p>
+        <p className="indent">
+          <ul>
+            <li>
+              <b>@JsonIgnore</b> <br />
+              Applied directly to the fields of an object to exclude them from
+              serialization (i.e., they won't appear in the JSON response).{" "}
+              <br /> <br />
+              <b style={{ fontWeight: "bold", color: "blue" }}>
+                public class User &#123;
+                <br />
+                &nbsp;&nbsp;private String name;
+                <br />
+                <br />
+                &nbsp;&nbsp;&#64;JsonIgnore
+                <br />
+                &nbsp;&nbsp;private String password;
+                <br />
+                <br />
+                &nbsp;&nbsp;// Getters and Setters
+                <br />
+                &#125;
+              </b>{" "}
+              <br />
+              In this example, the password field will not be included in the
+              JSON response.
+            </li>{" "}
+            <br />
+            <li>
+              <b>@JsonIgnoreProperties</b> <br />
+              Used at the class level to ignore multiple properties. <br />{" "}
+              <br />
+              <b style={{ fontWeight: "bold", color: "blue" }}>
+                &#64;JsonIgnoreProperties(&#123;&quot;password&quot;,
+                &quot;ssn&quot;&#125;)
+                <br />
+                public class User &#123;
+                <br />
+                &nbsp;&nbsp;private String name;
+                <br />
+                &nbsp;&nbsp;private String password;
+                <br />
+                &nbsp;&nbsp;private String ssn;
+                <br />
+                <br />
+                &nbsp;&nbsp;// Getters and Setters
+                <br />
+                &#125;
+              </b>
+              <br />
+              Here, both password and ssn fields are excluded from the JSON
+              response.
+            </li>
+          </ul>
+
+          <p>
+            Advantages of Static Filtering
+            <ul>
+              <li>Simplicity: Easy to implement and understand.</li>
+              <li>
+                Performance: Reduces the amount of data sent over the network,
+                which can improve performance.
+              </li>
+              <li>
+                Security: Helps to ensure sensitive information is not exposed
+                inadvertently.
+              </li>
+            </ul>
+          </p>
+        </p>{" "}
+      </div>
     </div>
   );
 }
